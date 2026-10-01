@@ -42,3 +42,6 @@ Chạy `scripts/Uninstall-CCM.ps1` bằng PowerShell (Run with PowerShell). Gỡ
 `tests/CCM-AI-Acceptance.xlsx` là workbook kiểm thử riêng từ mẫu sideload của Microsoft, không phải dữ liệu tài chính thực tế. Khi được Excel nạp cùng CCM-AI, runner chỉ chạy nếu thuộc tính Title đúng `CCM-AI-ACCEPTANCE-ONLY`. Runner tạo các sheet tên TEST, đọc qua Office.js, ghép khác thứ tự, ghi công thức thật, đối soát 1080/120, chặn ghi đè và khôi phục. Kết quả được lưu vào `docs/local-officejs-acceptance.json`. Không đổi Title của workbook thật thành giá trị này.
 
 Nếu file kết quả chưa tồn tại hoặc có kiểm tra failed, chưa được coi tích hợp Excel thành công. Người dùng cũng có thể làm các bước thủ công trong NGHIEM-THU.md.
+
+
+AI cục bộ (bản 0.2): chạy Cài AI cục bộ.cmd để tải Ollama CPU và Qwen3 4B. Hướng dẫn tại [AI-CUC-BO.md](AI-CUC-BO.md). Máy đã cài mô hình không cần tải lại. Hồ sơ xử lý trên máy, không cần API key.

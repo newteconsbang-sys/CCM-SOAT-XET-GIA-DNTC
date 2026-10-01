@@ -8,7 +8,8 @@ from openpyxl import load_workbook
 class ServiceTests(unittest.TestCase):
  def setUp(self):self.c=TestClient(app,base_url='https://localhost:3443',headers={'X-CCM-Token':TOKEN})
  def test_security(self):
-  self.assertEqual(self.c.get('/api/health').json()['ai'],'disabled')
+  self.assertIn(self.c.get('/api/health').json()['ai'],['disabled','ollama-local'])
+  self.assertFalse(self.c.get('/api/health').json()['externalDataTransmission'])
   self.assertEqual(TestClient(app,base_url='https://localhost:3443').get('/api/prices').status_code,401)
   self.assertEqual(self.c.post('/api/profiles',headers={'origin':'https://evil.example'},json={}).status_code,403)
  def test_rule_versions(self):

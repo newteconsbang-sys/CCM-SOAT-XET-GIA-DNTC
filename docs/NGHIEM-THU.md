@@ -1,4 +1,4 @@
-# Phiếu nghiệm thu CCM-AI 0.1
+# Phiếu nghiệm thu CCM-AI 0.2
 
 Chỉ dùng workbook thử hoặc bản sao không có dữ liệu thật. Kiểm thử tự động xử lý dữ liệu/dịch vụ không thay thế nghiệm thu Excel Desktop.
 
@@ -25,3 +25,6 @@ Chỉ dùng workbook thử hoặc bản sao không có dữ liệu thật. Kiể
 | Không có AI | Chọn vùng, tính toán, sửa giá, xuất kết quả vẫn hoạt động; không tuyên bố có kết quả AI |
 
 Ghi ngày, người kiểm tra, phiên bản Excel và kết quả từng tình huống. Các sheet TEST và báo cáo KIỂM THỬ đều là dữ liệu minh họa.
+
+
+AI cục bộ: chạy thử minh họa, kiểm tra thiếu nguồn; chọn nguồn và xem trước nội dung; xác nhận phân tích; thử dùng/từ chối gợi ý. Gợi ý phải còn trạng thái Vàng và chưa xác nhận; workbook chỉ thay đổi sau xem trước và Áp dụng. Đổi dòng/nguồn trong lúc AI chạy phải chặn gợi ý cũ. Rút kết nối Ollama: vẫn thao tác soát xét thủ công được.

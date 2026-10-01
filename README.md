@@ -4,7 +4,9 @@ Excel task pane add-in cá nhân cho Microsoft 365 trên Windows. Giao diện Re
 
 **Bắt đầu:** bấm `Cai-dat-CCM.cmd`, xác nhận chứng chỉ CCM-AI localhost trực tiếp trong Windows, rồi bấm shortcut Khởi động CCM-AI. Xem [hướng dẫn cài đặt](docs/CAI-DAT.md) và [hướng dẫn sử dụng](docs/HUONG-DAN.md).
 
-**Trạng thái nghiệm thu:** xem [kết quả kiểm tra](docs/KET-QUA-KIEM-TRA.md). Đây là bản 0.1 để nghiệm thu cá nhân, chưa xác nhận triển khai sản xuất hoặc tích hợp Excel khi chưa có kết quả đọc/ghi Office.js thực tế.
+**Trạng thái nghiệm thu:** xem [kết quả kiểm tra](docs/KET-QUA-KIEM-TRA.md). Đây là bản 0.2 để nghiệm thu cá nhân, chưa xác nhận triển khai sản xuất hoặc tích hợp Excel khi chưa có kết quả đọc/ghi Office.js thực tế.
+
+Xem [AI cục bộ](docs/AI-CUC-BO.md) để cài mô hình và duyệt gợi ý trong Excel.
 
 ## Các phần đã triển khai
 
@@ -19,7 +21,7 @@ Excel task pane add-in cá nhân cho Microsoft 365 trên Windows. Giao diện Re
 
 ## Giới hạn cụ thể
 
-Không có API AI trong bản này; không gửi dữ liệu ra ngoài hoặc giả lập AI. Chưa có OCR, so sánh kỹ thuật tự động/ghép ngữ nghĩa, trình dựng mọi công thức Excel, hộp Save As Windows riêng, sao lưu toàn bộ thư viện tự động. Công thức kiểm tra hỗ trợ tham chiếu A1 với số học và SUM/AVERAGE/MIN/MAX/COUNT/IF/ROUND/ABS; tên vùng, tham chiếu ngoài workbook, hàm động bị chặn. Cách tính thành tiền khác KL×(VT+NC) cần giữ nguyên file gốc và chưa được tính tự động. Quy tắc nghiệp vụ thực tế chưa được cung cấp nên khởi tạo chưa duyệt, cần người phụ trách hiệu chỉnh.
+Đã có AI cục bộ qua Ollama để gợi ý ghép ngữ nghĩa và diễn giải có căn cứ; xem docs/AI-CUC-BO.md. Chưa có OCR, xác minh kỹ thuật tự động, trình dựng mọi công thức Excel, hộp Save As Windows riêng, sao lưu toàn bộ thư viện tự động. Công thức kiểm tra hỗ trợ tham chiếu A1 với số học và SUM/AVERAGE/MIN/MAX/COUNT/IF/ROUND/ABS; tên vùng, tham chiếu ngoài workbook, hàm động bị chặn. Cách tính thành tiền khác KL×(VT+NC) cần giữ nguyên file gốc và chưa được tính tự động. Quy tắc nghiệp vụ thực tế chưa được cung cấp nên khởi tạo chưa duyệt, cần người phụ trách hiệu chỉnh.
 
 ## Mã nguồn và build
 

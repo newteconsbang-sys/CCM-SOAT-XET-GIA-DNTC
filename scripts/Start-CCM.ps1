@@ -2,6 +2,7 @@
 $ErrorActionPreference='Stop'
 $root=Split-Path -Parent $PSScriptRoot
 try {
+ if (Test-Path -LiteralPath (Join-Path $root 'runtime/ollama/ollama.exe')) { try { & (Join-Path $PSScriptRoot 'Start-LocalAI.ps1') } catch { Write-Warning $_.Exception.Message } }
  $runtime=Get-Content -LiteralPath (Join-Path $root 'config/runtime.json') -Raw | ConvertFrom-Json
  if (!(Test-Path -LiteralPath $runtime.python)) { throw 'Không tìm thấy Python. Chạy Cai-dat-CCM.cmd trước.' }
  $cert=New-Object System.Security.Cryptography.X509Certificates.X509Certificate2((Join-Path $root 'config/localhost.cer'))

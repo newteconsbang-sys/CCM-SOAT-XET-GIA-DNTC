@@ -17,8 +17,19 @@ Office phát hiện: Microsoft 365 O365ProPlusRetail, x64, 16.0.20430.20118. B�
 
 Chưa có kết quả Office.js đọc/ghi trong Excel Desktop thực tế: không tuyên bố tích hợp thành công. Workbook kiểm thử riêng và runner đã chuẩn bị; cần hoàn tất tin cậy chứng chỉ, mở workbook nghiệm thu trong Excel và kiểm tra file `local-officejs-acceptance.json`. Việc tự động chặn bảo vệ, tham chiếu vòng, ghi đè/khôi phục ở lớp Office.js cần được xác nhận bằng workbook đó và phiếu NGHIEM-THU.md.
 
-Không có API AI, OCR hoặc bộ quy tắc nghiệp vụ thực tế đã duyệt. Bản hiện tại cần nghiệm thu cá nhân trước khi dùng hồ sơ thật; chưa được coi hoàn tất toàn bộ yêu cầu đầu vào.
+Tại bản 0.1 chưa có API AI, OCR hoặc bộ quy tắc nghiệp vụ thực tế đã duyệt. AI cục bộ được bổ sung trong bản 0.2 bên dưới. Bản hiện tại cần nghiệm thu cá nhân trước khi dùng hồ sơ thật; chưa được coi hoàn tất toàn bộ yêu cầu đầu vào.
 
 ## Cập nhật cài đặt trên máy
 
 Windows đã tin cậy đúng chứng chỉ của bản cài ở `D:\00.Setupgpt\SoatXetGia`, thumbprint `B17825672AF5F5E733AF8B24CED96B9D85E455E1`. Dịch vụ được khởi động bằng script cài và kiểm tra HTTPS thành công, phản hồi đúng installPath. Excel đã được khởi động và đã gửi lệnh mở workbook nghiệm thu riêng. Công cụ đọc cửa sổ Excel lỗi `FrameArrived timed out` rồi `window capture timed out` sau một lần phục hồi; không thao tác tiếp dựa trên tọa độ cũ. Chưa nhận được file kết quả Office.js, nên trạng thái nghiệm thu đọc/ghi Excel vẫn chưa xác nhận. Người dùng có thể tiếp tục bằng Home → Add-ins → Advanced → My Add-ins → Developer Add-ins → CCM-AI → Add.
+
+## Bản 0.2 — AI cục bộ (2026-10-01)
+
+Đã cài Ollama v0.35.0 CPU với chữ ký Ollama Inc. hợp lệ và Qwen3 4B Q4_K_M (2.5 GB) tại thư mục cài CCM-AI. Model lưu trong data/models; cấu hình enabled=true, model=qwen3:4b. Log tiến trình xác nhận OLLAMA_NO_CLOUD=true và Ollama cloud disabled: true. Backend HTTPS đã chạy phiên bản 0.2.0 tại đúng installPath.
+
+- TypeScript strict và Vite build đạt; 7 kiểm thử core, 5 kiểm thử backend và 8 kiểm thử AI đạt. Kiểm thử AI tự động dùng mock transport, không phải bằng chứng suy luận thật.
+- Đã gọi suy luận thật bằng Qwen3 4B trên máy. Mẫu không có nguồn trả Chưa đủ dữ liệu, lần đầu khoảng 41.6 giây. Mẫu hai dòng cùng mô tả/ĐVT gợi ý ref:0, giữ đúng đơn giá vật tư 20.000 từ nguồn so với giá chào 22.000, không tự tạo nguồn giá thư viện, trạng thái vàng. Phản hồi từ chối mẫu kiểm thử đã lưu SQLite, chưa ghi workbook.
+- Màn hình trình duyệt đã nhận Ollama đang chạy, mô hình qwen3:4b. Đây là xác nhận giao diện web và API, chưa phải đọc/ghi Excel Desktop.
+- Cơ chế schema động chỉ cho model chọn các ID trong bản xem trước; backend kiểm tra lại nguồn/JSON. Ngữ cảnh xem trước hết hạn hoặc đã dùng bị chặn; đổi mô hình/quy tắc cần chuẩn bị lại. Giá được lấy lại từ nguồn, chưa phải AI xác minh tính tương đương.
+
+Giới hạn: AI vẫn có thể diễn giải thiếu chính xác, kể cả cảnh báo một điều kiện đã ghi trong mô tả. Người dùng phải đối chiếu thông số, VAT và phạm vi trước khi chấp nhận. AI chưa tự phân rã giá gộp, chọn hệ số hoặc huấn luyện từ phản hồi. Nghiệm thu Office.js trong Excel Desktop vẫn chưa xác nhận; các kết quả trên dùng dữ liệu minh họa.
