@@ -1,0 +1,17 @@
+{
+  "business": "NCC",
+  "effective": "2026-10-01",
+  "approved": false,
+  "notice": "Quy tắc khởi tạo, cần người phụ trách nghiệp vụ hiệu chỉnh/duyệt.",
+  "requireSource": true,
+  "highPriceIsError": false,
+  "requireEquivalentScope": true,
+  "checks": [
+    "Đơn vị, hãng/model, thông số",
+    "VAT, vận chuyển, phụ kiện",
+    "Phạm vi cung cấp/thi công và thời điểm",
+    "Không tự chọn giá thấp nhất",
+    "Chỉ tính thành tiền theo cách người dùng xác nhận"
+  ],
+  "version": 1
+}

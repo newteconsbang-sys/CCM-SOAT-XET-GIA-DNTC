@@ -1,0 +1,213 @@
+Hãy xây dựng và bàn giao Excel Add-in “CCM-AI – Soát xét giá” theo các yêu cầu dưới đây. Tôi không chuyên lập trình; cần ứng dụng cài được vào Excel và sử dụng bằng nút bấm, không chỉ có hình giao diện hoặc mã nguồn.
+
+## 1. Mục tiêu và môi trường
+
+Ứng dụng phục vụ soát xét giá cơ điện, có 4 nghiệp vụ:
+- Điện nước ĐNTC.
+- EW.
+- NTP.
+- NCC.
+
+Mỗi nghiệp vụ có quy tắc và mẫu báo cáo riêng.
+
+Dùng Excel Desktop trên Windows. Trước khi triển khai, kiểm tra phiên bản Excel, khả năng hỗ trợ add-in và quyền cài đặt. Nếu chưa đủ thông tin, hướng dẫn tôi lấy thông tin cần thiết.
+
+Công nghệ dự kiến:
+- Office.js kết nối và đọc/ghi Excel.
+- React + TypeScript làm giao diện.
+- FastAPI/Python xử lý hồ sơ khi cần.
+- SQLite lưu dữ liệu cho bản cá nhân.
+- Không dùng Docker.
+
+Kiểm tra tính phù hợp với Excel thực tế trước khi chốt công nghệ. Nếu cần đổi kiến trúc, giải thích cho tôi.
+
+## 2. Thư mục dự án và lưu trữ
+
+Thư mục: D:\00.Setupgpt\SoatXetGia
+
+Tổ chức:
+- frontend: giao diện add-in.
+- backend: xử lý dữ liệu.
+- manifests: cấu hình tích hợp Excel.
+- data: dữ liệu và thư viện giá.
+- uploads: tài liệu gốc.
+- rules: quy tắc nghiệp vụ, hướng dẫn AI.
+- templates: mẫu báo cáo.
+- reports: báo cáo xuất.
+- backups: bản sao lưu.
+- docs: hướng dẫn, yêu cầu và tiến độ.
+
+Kiểm tra dự án hiện có trước khi sửa; tận dụng phần đã làm. Không xóa hoặc ghi đè dữ liệu cũ.
+
+Quản lý mã nguồn bằng Git; không đưa tài liệu tài chính, dữ liệu thực tế và khóa API vào Git.
+
+Nếu không truy cập được ổ D: trên máy tôi, nói rõ và chuẩn bị bộ mã nguồn cùng hướng dẫn chuyển sang máy. Không tuyên bố đã cài trên Windows khi chưa kiểm tra được.
+
+## 3. Tích hợp vào Excel
+
+Sau khi cài, Excel có nút “CCM-AI – Soát xét giá” trên thanh công cụ. Bấm nút sẽ mở bảng điều khiển bên phải.
+
+Add-in làm việc trực tiếp với workbook đang mở:
+- Đọc vùng được chọn, gồm giá trị và công thức.
+- Đọc danh sách sheet.
+- Ghi giá trị hoặc công thức vào vùng đích.
+- Tạo sheet phân tích đơn giá và báo cáo khi tôi yêu cầu.
+
+Bàn giao cả cấu hình add-in, hướng dẫn cài đặt phù hợp và shortcut “Khởi động CCM-AI”. Bản chạy cục bộ cần có kiểm tra dịch vụ đang chạy, kết nối và cấu hình HTTPS/chứng chỉ phù hợp.
+
+Khi sử dụng bình thường, tôi không cần mở Codex hoặc tự gõ lệnh.
+
+## 4. Hai vùng dữ liệu làm việc
+
+Tôi chọn bằng chuột:
+1. Vùng báo giá NCC/NTP.
+2. Vùng giá soát xét.
+
+Mỗi vùng thường có:
+STT | Hạng mục | Đơn giá vật tư | Đơn giá nhân công | Thành tiền.
+
+Yêu cầu:
+- Hai vùng có thể cùng sheet hoặc khác sheet.
+- Không cố định địa chỉ, tên sheet hay thứ tự cột.
+- Tự đề xuất ánh xạ cột và cho tôi xác nhận.
+- ĐVT và khối lượng có thể nằm ngoài hai vùng; cho chọn cột dùng chung hoặc riêng.
+- Phân biệt dòng hạng mục, tiêu đề nhóm và tổng cộng.
+- Giữ nguyên vùng báo giá gốc.
+- Ghép dòng theo STT, mô tả, thông số và đơn vị; không chỉ dựa vào vị trí.
+- Giữ STT dạng chuỗi, phân biệt 1.10 với 1.1.
+- Dòng trùng, thiếu hoặc ghép chưa chắc chắn phải cho tôi xác nhận.
+
+## 5. Giao diện
+
+Bảng điều khiển bên phải gồm:
+1. Chọn nghiệp vụ.
+2. Chọn hai vùng và ánh xạ cột.
+3. Nạp hồ sơ, chọn nguồn giá và quy tắc.
+4. Bắt đầu soát xét.
+5. Chọn nơi ghi kết quả, ghi giá trị hoặc công thức.
+6. Xem trước và xuất báo cáo.
+
+Khi chọn ô đơn giá, có nút mở “Phân tích đơn giá”, gồm tab Vật tư và Nhân công. Chọn cách hiển thị phù hợp khả năng Excel: bảng điều khiển, hộp thoại hoặc sheet riêng; không giả lập một giao diện không thể triển khai.
+
+Giao diện tiếng Việt, dễ đọc; trạng thái phải có chữ đi kèm màu:
+- Xanh: đủ căn cứ, đáp ứng quy tắc.
+- Vàng: cần kiểm tra hoặc chưa đủ dữ liệu.
+- Đỏ: lỗi đã xác định có chứng cứ.
+
+Giá cao hơn tham chiếu không tự động là lỗi.
+
+## 6. Ba loại đơn giá
+
+Cả vật tư và nhân công đều hỗ trợ:
+
+A. Giá đơn
+Một vật tư hoặc công tác, có đơn vị, giá và nguồn tham chiếu.
+
+B. Giá gộp
+Một đơn giá gồm nhiều thành phần.
+
+Ví dụ: “Ống đồng + cách nhiệt” gồm giá ống đồng và giá cách nhiệt. Nhân công cũng có thể gồm nhiều công tác.
+
+Bảng phân tích:
+Thành phần | ĐVT | Hệ số quy đổi/hao phí | Đơn giá | Giá đóng góp | Nguồn.
+
+Đơn giá gộp = tổng (hệ số × đơn giá thành phần).
+
+Cho thêm, xóa, sửa thành phần và nguồn giá. AI chỉ đề xuất; không tự đặt hệ số hoặc thành phần khi thiếu căn cứ.
+
+C. Công thức
+Vật tư phụ, phụ kiện hoặc khoản mục khác có thể tính theo tỷ lệ hoặc các ô liên quan. Không mặc định mọi dòng phụ kiện đều tính theo %.
+
+## 7. Công thức Excel
+
+Cho phép:
+- Đọc và giữ công thức hiện có.
+- Hiển thị công thức cùng diễn giải dễ hiểu.
+- Chọn tỷ lệ và các ô/vùng làm cơ sở tính.
+- Chèn công thức Excel thực sự, không phải chuỗi văn bản.
+- Liên kết với sheet phân tích đơn giá hoặc nguồn dữ liệu phù hợp.
+- Kiểm tra tham chiếu khi chuyển công thức giữa các vùng.
+
+Ví dụ: vật tư phụ = tỷ lệ được chọn × tổng giá trị các dòng được chọn. Không mặc định tính trên toàn bộ bảng.
+
+Kiểm tra tham chiếu vòng, ô nguồn thiếu, lỗi công thức và cộng trùng tổng phụ.
+
+Thành tiền phải theo khối lượng và cách tính được xác nhận từ file. Chỉ dùng “Khối lượng × (ĐG vật tư + ĐG nhân công)” khi phù hợp, không tự mặc định.
+
+Ưu tiên công thức Excel thông thường để bảng vẫn tính được khi đóng add-in; chức năng gọi AI mới cần dịch vụ tương ứng.
+
+## 8. Hồ sơ và nguồn dữ liệu
+
+Tách ba khu vực:
+
+- Hồ sơ cần soát: BOQ, báo giá, tài liệu kỹ thuật Excel/Word/PDF.
+- Nguồn tham chiếu: thư viện giá, gói đã giao thầu, báo giá tham khảo.
+- Hướng dẫn AI: quy tắc, mẫu đã duyệt, phản hồi và chỉnh sửa của tôi.
+
+Lưu nguồn, phiên bản và thời điểm cập nhật. Nạp tài liệu là bổ sung căn cứ, không thông báo như đã huấn luyện lại mô hình.
+
+Giá tham chiếu cần lưu khi có:
+Tên/mã vật tư, hãng/model, thông số, đơn vị, giá, ngày giá, dự án, đối tác, VAT, vận chuyển, phụ kiện, phạm vi cung cấp/thi công và điều kiện thanh toán.
+
+Phân biệt giá tương đương trực tiếp và giá chỉ mang tính tham khảo. Không tự lấy giá thấp nhất làm giá đề xuất.
+
+Mỗi đề xuất phải có nguồn và lý do. Không tìm thấy thì ghi “Chưa đủ dữ liệu”.
+
+## 9. Quy tắc và AI
+
+Cho tôi chỉnh sửa quy tắc theo nghiệp vụ, lưu phiên bản và ngày áp dụng.
+
+Tính toán số học bằng công cụ xác định; AI hỗ trợ hiểu mô tả, đề xuất ghép dòng, phân tích giá gộp và viết diễn giải.
+
+Nếu sử dụng API AI:
+- Nêu rõ nhà cung cấp, cấu hình và chi phí sử dụng riêng.
+- Không coi tài khoản ChatGPT là khóa API.
+- Khóa lưu ở backend, không đưa vào frontend/Git.
+- Chỉ gửi dữ liệu hồ sơ ra ngoài khi tôi cho phép.
+- Khi chưa cấu hình AI, chức năng chọn vùng, tính toán, sửa giá và xuất kết quả vẫn phải sử dụng được; không giả lập kết quả AI như kết quả thật.
+
+## 10. Ghi kết quả và xuất báo cáo
+
+Hai chức năng riêng:
+
+A. Ghi vào workbook
+- Ghi giá trị hoặc chèn công thức.
+- Chọn sheet, ô bắt đầu, vùng đích hoặc tạo sheet mới.
+- Xem trước các ô sẽ thay đổi.
+- Cảnh báo dữ liệu sẵn có, vùng chồng lấn hoặc ô bị bảo vệ.
+- Chỉ ghi khi tôi nhấn “Áp dụng”.
+- Có bản sao trước thay đổi để khôi phục, không chỉ dựa vào Ctrl+Z.
+
+B. Xuất báo cáo
+- Chọn mẫu, sửa tiêu đề, thứ tự mục và cột.
+- Xuất toàn bộ hoặc chỉ dòng cần lưu ý.
+- Định dạng Excel/Word/PDF.
+- Nội dung: giá chào, giá soát xét, chênh lệch, ảnh hưởng thành tiền, lý do điều chỉnh và nguồn.
+- Nêu rõ cơ sở tính chênh lệch; không tính % khi mẫu số bằng 0.
+- Cho xem trước và chọn vị trí lưu.
+
+## 11. Quy trình sử dụng cần đạt
+
+Khởi động CCM-AI → mở Excel → mở file báo giá → bấm CCM-AI → chọn nghiệp vụ → chọn hai vùng → xác nhận cột → chọn nguồn → soát xét → chỉnh giá/thành phần/công thức → xem trước → áp dụng → xuất báo cáo.
+
+Lưu cấu hình ánh xạ theo mẫu để lần sau không phải chọn lại từ đầu.
+
+## 12. Triển khai và nghiệm thu
+
+Trước tiên kiểm tra môi trường và phần đã có, lập kế hoạch ngắn rồi triển khai từng phần. Tự giải quyết lựa chọn kỹ thuật thông thường; chỉ hỏi khi thiếu thông tin ảnh hưởng đến nghiệp vụ hoặc khả năng cài đặt.
+
+Ưu tiên hoàn thành luồng thực tế:
+Chọn vùng → đọc dữ liệu → phân tích đơn giá → xem trước → ghi công thức vào Excel.
+
+Kiểm tra tối thiểu:
+- Giá đơn.
+- Giá gộp cả vật tư và nhân công.
+- Khoản tính theo tỷ lệ.
+- Hai vùng khác thứ tự dòng hoặc khác sheet.
+- Thiếu nguồn, ghép mơ hồ và công thức lỗi.
+- Ghi vào vùng đã có dữ liệu và khôi phục.
+- Xuất báo cáo khớp dữ liệu đã xác nhận.
+
+Bàn giao mã nguồn, bộ cấu hình cài add-in, shortcut khởi động, hướng dẫn bằng tiếng Việt và kết quả kiểm tra.
+
+Phân biệt rõ chức năng đã chạy thật, dữ liệu minh họa và phần chưa hoàn thành. Chỉ xác nhận tích hợp Excel thành công khi đã kiểm tra đọc vùng và ghi giá trị/công thức trong Excel thực tế.
