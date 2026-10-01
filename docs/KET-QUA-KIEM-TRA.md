@@ -11,7 +11,7 @@
 
 ## Cài đặt trên máy
 
-Office phát hiện: Microsoft 365 O365ProPlusRetail, x64, 16.0.20430.20118. Manifest đã đăng ký vào HKCU Office 16.0 WEF Developer cho đúng ID CCM; shortcut Khởi động CCM-AI đã tạo trên Desktop và trong D:\SoatXetGia, cấu hình trỏ runtime portable. Chứng chỉ localhost đã tạo nhưng bước tin cậy Windows chưa được xác nhận tại thời điểm lập báo cáo.
+Office phát hiện: Microsoft 365 O365ProPlusRetail, x64, 16.0.20430.20118. Bộ bàn giao đã đặt vào đúng `D:\00.Setupgpt\SoatXetGia` khi thư mục này chưa tồn tại, không ghi đè dữ liệu cũ. Manifest đã đăng ký vào HKCU Office 16.0 WEF Developer cho đúng ID CCM, đường dẫn manifest ở thư mục đó; shortcut Khởi động CCM-AI trên Desktop trỏ runtime portable của bản cài. Mã nguồn và Git phát triển giữ thêm tại `D:\SoatXetGia`. Chứng chỉ localhost đã tạo nhưng bước tin cậy Windows chưa được xác nhận tại thời điểm lập báo cáo.
 
 ## Chưa được xác nhận
 

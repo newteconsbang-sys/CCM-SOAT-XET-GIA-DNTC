@@ -10,7 +10,7 @@ for folder in allowed:
  for p in (ROOT/folder).rglob('*'):
   rel=p.relative_to(ROOT)
   if p.is_file() and not any(x in exclude for x in rel.parts) and not p.name.startswith('local-') and not p.name.startswith('refine_') and p.suffix not in ['.pyc','.log']:files.append(p)
-for name in ['README.md','.gitignore','Cai-dat-CCM.cmd','Khởi động CCM-AI.cmd','frontend/package.json','frontend/tsconfig.json','frontend/index.html','frontend/pnpm-lock.yaml','docs/YEU-CAU.txt']:
+for name in ['README.md','.gitignore','Cai-dat-CCM.cmd','Khởi động CCM-AI.cmd','frontend/package.json','frontend/tsconfig.json','frontend/index.html','frontend/pnpm-lock.yaml','frontend/pnpm-workspace.yaml','docs/YEU-CAU.txt']:
  p=ROOT/name
  if p.exists():files.append(p)
 with ZipFile(OUT,'w',ZIP_DEFLATED,compresslevel=6) as z:
