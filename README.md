@@ -4,7 +4,7 @@ Excel task pane add-in cá nhân cho Microsoft 365 trên Windows. Giao diện Re
 
 **Bắt đầu:** bấm `Cai-dat-CCM.cmd`, xác nhận chứng chỉ CCM-AI localhost trực tiếp trong Windows, rồi bấm shortcut Khởi động CCM-AI. Xem [hướng dẫn cài đặt](docs/CAI-DAT.md) và [hướng dẫn sử dụng](docs/HUONG-DAN.md).
 
-**Trạng thái nghiệm thu:** xem [kết quả kiểm tra](docs/KET-QUA-KIEM-TRA.md). Đây là bản 0.2 để nghiệm thu cá nhân, chưa xác nhận triển khai sản xuất hoặc tích hợp Excel khi chưa có kết quả đọc/ghi Office.js thực tế.
+**Trạng thái nghiệm thu:** xem [kết quả kiểm tra](docs/KET-QUA-KIEM-TRA.md). Đây là bản 0.3 để nghiệm thu cá nhân, chưa xác nhận triển khai sản xuất hoặc tích hợp Excel khi chưa có kết quả đọc/ghi Office.js thực tế.
 
 Xem [AI cục bộ](docs/AI-CUC-BO.md) để cài mô hình và duyệt gợi ý trong Excel.
 
@@ -30,3 +30,6 @@ Xem [AI cục bộ](docs/AI-CUC-BO.md) để cài mô hình và duyệt gợi ý
 Dev dùng Node 22+, pnpm và Python 3.12. `frontend/package.json` và lockfile xác định thư viện frontend; `backend/requirements.txt` xác định thư viện backend. Bản bàn giao đã có `frontend/dist`, `backend/vendor` và `runtime/python` nên người dùng không chạy build.
 
 Khi phát triển, chạy tsc và Vite trong frontend, chạy `tests/core.test.ts` với tsx, chạy `tests/backend_test.py` với runtime Python. Backend kiểm thử cần httpx2 (chỉ phục vụ test). Không commit `config`, khóa/chứng chỉ riêng, SQLite, uploads, reports hay backups. Không cấu hình remote Git hoặc gửi mã/dữ liệu ra mạng trong bộ bàn giao.
+
+
+Bản 0.3 bổ sung Ghi nhớ nghiệp vụ đã duyệt: lưu ví dụ chuẩn trong SQLite, tra cứu theo nghiệp vụ/ĐVT/mô tả và hiển thị bài học cho lần AI tiếp theo; có nút thu hồi. Chưa huấn luyện lại trọng số mô hình. Xem docs/AI-CUC-BO.md.

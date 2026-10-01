@@ -33,3 +33,7 @@ Windows đã tin cậy đúng chứng chỉ của bản cài ở `D:\00.Setupgpt
 - Cơ chế schema động chỉ cho model chọn các ID trong bản xem trước; backend kiểm tra lại nguồn/JSON. Ngữ cảnh xem trước hết hạn hoặc đã dùng bị chặn; đổi mô hình/quy tắc cần chuẩn bị lại. Giá được lấy lại từ nguồn, chưa phải AI xác minh tính tương đương.
 
 Giới hạn: AI vẫn có thể diễn giải thiếu chính xác, kể cả cảnh báo một điều kiện đã ghi trong mô tả. Người dùng phải đối chiếu thông số, VAT và phạm vi trước khi chấp nhận. AI chưa tự phân rã giá gộp, chọn hệ số hoặc huấn luyện từ phản hồi. Nghiệm thu Office.js trong Excel Desktop vẫn chưa xác nhận; các kết quả trên dùng dữ liệu minh họa.
+
+## Bản 0.3 — Ghi nhớ nghiệp vụ (2026-10-01)
+
+TypeScript/Vite đạt; 13 kiểm thử API AI đạt, gồm lưu ví dụ vào SQLite và lấy lại sau khi tạo router mới, duyệt bắt buộc, tách nghiệp vụ/ĐVT, bỏ giá lịch sử khỏi ngữ cảnh, tắt tra cứu và thu hồi. 5 kiểm thử backend hồi quy đạt. Kiểm thử thật trên bản đã cài đã lưu ví dụ minh họa, lấy vào approvedExamples, gọi Ollama và thu hồi ví dụ sau kiểm thử. Giá hiện tại thiếu vẫn để null. Mô hình thử nghiệm chỉ trả Chưa đủ dữ liệu, chưa diễn giải bài học; ứng dụng vẫn hiển thị bài học đã truy xuất ở recalledExamples. Không tuyên bố AI luôn áp dụng đúng ví dụ. Giao diện web bản 0.3 có mục Ghi nhớ nghiệp vụ đã duyệt; đọc/ghi Excel Desktop vẫn cần nghiệm thu.

@@ -2,7 +2,7 @@ from pathlib import Path
 from zipfile import ZipFile,ZIP_DEFLATED
 import hashlib,json
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'CCM-AI-Ban-giao-0.2.zip'
+OUT=ROOT/'CCM-AI-Ban-giao-0.3.zip'
 allowed=['frontend/src','frontend/public','frontend/dist','backend','manifests','rules','templates','docs','scripts','tests','runtime']
 exclude=['node_modules','__pycache__','.venv','.git','data','uploads','reports','backups','config','versions','ollama','ollama-download','models']
 files=[]
@@ -17,5 +17,5 @@ with ZipFile(OUT,'w',ZIP_DEFLATED,compresslevel=6) as z:
  for p in sorted(set(files)):z.write(p,'SoatXetGia/'+p.relative_to(ROOT).as_posix())
  for folder in ['data','uploads','reports','backups','config']:z.writestr('SoatXetGia/'+folder+'/.keep','')
 checksum=hashlib.sha256(OUT.read_bytes()).hexdigest()
-(ROOT/'CCM-AI-Ban-giao-0.2.sha256').write_text(checksum+'  '+OUT.name+'\n',encoding='ascii')
+(ROOT/'CCM-AI-Ban-giao-0.3.sha256').write_text(checksum+'  '+OUT.name+'\n',encoding='ascii')
 print(json.dumps({'file':str(OUT),'bytes':OUT.stat().st_size,'sha256':checksum,'files':len(set(files))}))

@@ -28,3 +28,13 @@ Mô hình lưu tại `data/models`; log tại `data/ollama-error.log`. CPU cần
 Nếu một Ollama khác đã chạy tại cổng 11434, script giữ nguyên dịch vụ đó; backend vẫn kiểm tra mô hình tải cục bộ. Cấu hình cloud-off chỉ áp dụng tiến trình do script CCM-AI khởi chạy. Bản ZIP không kèm mô hình lớn hoặc dữ liệu người dùng; máy mới chạy script cài AI để tải riêng.
 
 Nguồn kỹ thuật: [Ollama Windows](https://docs.ollama.com/windows), [Local-only mode](https://docs.ollama.com/faq), [Chat API](https://docs.ollama.com/api/chat), [Qwen3 4B](https://ollama.com/library/qwen3:4b).
+
+## Bản 0.3 — Ghi nhớ nghiệp vụ đã duyệt
+
+Trong mục AI cục bộ, mở **Ghi nhớ nghiệp vụ đã duyệt**. Sau khi sửa và xác nhận dòng trong bảng kiểm tra, nhập bài học 10–1500 ký tự, đánh dấu đã duyệt và bấm **Lưu ví dụ chuẩn đã duyệt**. Ví dụ được lưu trong SQLite (`ai-memory`), còn sau khi đóng ứng dụng/khởi động lại dịch vụ.
+
+Lần chuẩn bị AI tiếp theo, nếu bật **Dùng ví dụ nghiệp vụ đã duyệt phù hợp**, ứng dụng tìm tối đa 3 ví dụ cùng nghiệp vụ, cùng ĐVT và có mô tả tương tự bằng từ khóa. Các ví dụ xuất hiện ở `approvedExamples` trong bản xem trước, có mã, ngày duyệt và phiên bản quy tắc. AI có thể dùng bài học để diễn giải và dẫn mã `memory:...`. Không đảm bảo mọi trường hợp tương tự đều được tìm hoặc AI luôn dùng đúng bài học; kiểm tra bản xem trước và kết quả.
+
+Đây là nhớ bằng tra cứu ví dụ, chưa huấn luyện lại trọng số mô hình. Quyết định dùng/từ chối gợi ý không tự biến thành ví dụ chuẩn. Giá số trong ví dụ cũ không đưa vào ngữ cảnh AI để dùng làm giá mới; giá đề xuất vẫn chỉ lấy từ các nguồn hiện tại đã chọn. Quy tắc hiện tại được áp dụng; phiên bản quy tắc cũ chỉ là lịch sử.
+
+Có thể bấm **Thu hồi ví dụ này** để ngừng sử dụng; lịch sử vẫn giữ trên máy. Bản xem trước có ví dụ đã thu hồi bị chặn khi phân tích. Để sửa bài học, thu hồi ví dụ cũ rồi lưu lại từ dòng đã chỉnh. Ghi nhớ giúp giữ bài học, không tự đảm bảo kết luận đúng.
