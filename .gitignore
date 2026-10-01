@@ -21,3 +21,5 @@ rules/versions/
 templates/versions/
 *.sha256
 .pnpm-store/
+libraries/
+tmp*/

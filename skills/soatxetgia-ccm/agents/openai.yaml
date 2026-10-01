@@ -1,0 +1,4 @@
+interface:
+  display_name: "Soát xét giá CCM"
+  short_description: "Dò bốn thư viện và điền giá theo cột bạn chọn"
+  default_prompt: "Dùng $soatxetgia-ccm để dò thư viện nghiệp vụ tôi chọn và điền giá vật tư, nhân công vào các cột tôi chỉ định trong vùng CCM."

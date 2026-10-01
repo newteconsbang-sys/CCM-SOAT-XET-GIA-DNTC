@@ -66,7 +66,7 @@ class LocalSecurity(BaseHTTPMiddleware):
         return response
 app.add_middleware(LocalSecurity)
 @app.get('/api/health')
-def health(request:Request): return {'app':'CCM-AI','version':'0.3.0','installPath':str(ROOT),'ai':'ollama-local' if (ROOT/'config/ai.json').exists() else 'disabled','https':request.url.scheme=='https','storage':'SQLite','externalDataTransmission':False}
+def health(request:Request): return {'app':'CCM-AI','version':'0.4.0','installPath':str(ROOT),'ai':'ollama-local' if (ROOT/'config/ai.json').exists() else 'disabled','https':request.url.scheme=='https','storage':'SQLite','externalDataTransmission':False}
 @app.get('/api/session')
 def session(): return {'token':TOKEN}
 @app.post('/api/acceptance')
@@ -192,5 +192,7 @@ def download_report(name:str):
     return FileResponse(p,filename=name)
 from backend.local_ai import make_router
 app.include_router(make_router(ROOT,records,insert,business))
+from backend.direct_ccm import make_router as direct_router
+app.include_router(direct_router(records,insert,business))
 DIST=ROOT/'frontend'/'dist'
 if DIST.exists(): app.mount('/',StaticFiles(directory=DIST,html=True),name='frontend')
