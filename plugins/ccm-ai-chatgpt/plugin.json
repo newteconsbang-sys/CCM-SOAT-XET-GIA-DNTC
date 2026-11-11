@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ccm-ai-chatgpt",
+  "version": "0.1.0",
+  "description": "Đọc thư viện giá ĐNTC, EW, NCC, NTP đã nạp bằng CCM-AI và soát xét đầu mục theo nguồn giá có phiên bản.",
+  "author": {"name": "CCM-AI"},
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CCM-AI · Soát giá",
+        "shortDescription": "Đọc thư viện và soát giá CCM",
+        "longDescription": "Cầu nối đọc bốn thư viện cục bộ của CCM-AI. Trả nguồn và phiên bản giá, giữ nguyên dòng Lô. Ghi Excel cần kết nối workbook riêng.",
+        "developerName": "CCM-AI",
+        "category": "Productivity",
+        "capabilities": ["Read"],
+        "defaultPrompt": "Dùng thư viện ĐNTC đã nạp trong CCM-AI để soát vùng CCM; tôi sẽ chọn cột vật tư và nhân công."
+      }
+    }
+  }
+}

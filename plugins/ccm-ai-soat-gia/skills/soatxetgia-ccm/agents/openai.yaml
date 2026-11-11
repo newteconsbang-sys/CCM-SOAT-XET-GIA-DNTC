@@ -1,0 +1,4 @@
+interface:
+  display_name: "Soát giá CCM"
+  short_description: "Soát giá theo thư viện và các cột bạn chọn"
+  default_prompt: "Dùng $soatxetgia-ccm để kiểm tra kết nối thư viện CCM-AI và soát vùng CCM theo nghiệp vụ, các cột tôi chọn; giữ nguyên dòng Lô."

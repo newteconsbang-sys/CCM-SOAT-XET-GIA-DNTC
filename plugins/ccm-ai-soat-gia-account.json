@@ -1,0 +1,12 @@
+{
+  "plugin_id": "plugins_6abe239328d48191ac1040938e306099",
+  "current_release_id": "pluginrel_6abe239576fc81919234c68a4ed5169e",
+  "scope": "USER",
+  "discoverability": "PRIVATE",
+  "version": "0.1.0",
+  "plugin_url": "https://chatgpt.com/plugins/plugins_6abe239328d48191ac1040938e306099",
+  "source_directory": "plugins/ccm-ai-soat-gia",
+  "skill_only": true,
+  "ccm_library_connection_verified": false,
+  "excel_installation_verified": false
+}

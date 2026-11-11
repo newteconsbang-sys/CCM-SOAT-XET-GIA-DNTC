@@ -1,1 +1,22 @@
-{"name": "ccm-ai-soat-xet-gia", "version": "0.4.0", "private": true, "scripts": {"build": "tsc --noEmit && vite build", "test": "tsx --test ../tests/core.test.ts"}, "dependencies": {"react": "19.2.0", "react-dom": "19.2.0"}, "devDependencies": {"@types/react": "19.2.0", "@types/react-dom": "19.2.0", "@types/office-js": "1.0.550", "@types/node": "22.19.0", "typescript": "5.9.3", "vite": "7.1.12", "tsx": "4.20.6"}}
+{
+  "name": "ccm-ai-soat-xet-gia",
+  "version": "0.7.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "test": "tsx --test ../tests/*.test.ts"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.0",
+    "@types/react-dom": "19.2.0",
+    "@types/office-js": "1.0.550",
+    "@types/node": "22.19.0",
+    "typescript": "5.9.3",
+    "vite": "7.1.12",
+    "tsx": "4.20.6"
+  }
+}

@@ -1,0 +1,9 @@
+interface:
+  display_name: "Soát giá từ CCM-AI"
+  short_description: "Đọc giá đã nạp từ add-in và soát các cột bạn chọn"
+  default_prompt: "Dùng $soatxetgia-ccm để đọc thư viện ĐNTC đã nạp bằng CCM-AI và xem trước kết quả soát vùng CCM."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "ccm-price-library"
+      description: "Đọc và đối chiếu thư viện CCM-AI cục bộ qua stdio."

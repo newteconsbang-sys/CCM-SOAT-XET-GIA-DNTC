@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.middleware.base import BaseHTTPMiddleware
 
 ROOT = Path(__file__).resolve().parents[1]
+APP_VERSION = (ROOT/'backend'/'VERSION').read_text(encoding='utf-8').strip() if (ROOT/'backend'/'VERSION').exists() else '0.7.0'
 BUSINESSES = ['Điện nước ĐNTC', 'EW', 'NTP', 'NCC']
 TOKEN = secrets.token_urlsafe(32)
 MAX_BYTES = 25 * 1024 * 1024
@@ -66,7 +67,7 @@ class LocalSecurity(BaseHTTPMiddleware):
         return response
 app.add_middleware(LocalSecurity)
 @app.get('/api/health')
-def health(request:Request): return {'app':'CCM-AI','version':'0.4.0','installPath':str(ROOT),'ai':'ollama-local' if (ROOT/'config/ai.json').exists() else 'disabled','https':request.url.scheme=='https','storage':'SQLite','externalDataTransmission':False}
+def health(request:Request): return {'app':'CCM-AI','version':APP_VERSION,'installPath':str(ROOT),'ai':'ollama-local' if (ROOT/'config/ai.json').exists() else 'disabled','https':request.url.scheme=='https','storage':'SQLite','externalDataTransmission':False}
 @app.get('/api/session')
 def session(): return {'token':TOKEN}
 @app.post('/api/acceptance')
@@ -193,6 +194,12 @@ def download_report(name:str):
 from backend.local_ai import make_router
 app.include_router(make_router(ROOT,records,insert,business))
 from backend.direct_ccm import make_router as direct_router
-app.include_router(direct_router(records,insert,business))
+app.include_router(direct_router(records,insert,business,ROOT/'libraries'))
+from backend.mep_router import router as mep_router
+app.include_router(mep_router)
+from backend.mep_packages import router as mep_packages_router
+app.include_router(mep_packages_router)
+from backend.library_router import router as library_router
+app.include_router(library_router)
 DIST=ROOT/'frontend'/'dist'
 if DIST.exists(): app.mount('/',StaticFiles(directory=DIST,html=True),name='frontend')

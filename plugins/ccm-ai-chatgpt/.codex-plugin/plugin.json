@@ -1,0 +1,16 @@
+{
+  "name": "ccm-ai-chatgpt",
+  "version": "0.1.0",
+  "description": "Soát giá theo bốn thư viện đã nạp bằng CCM-AI.",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "CCM-AI · Soát giá",
+    "shortDescription": "Đọc thư viện và soát giá CCM",
+    "longDescription": "Đọc thư viện CCM-AI có phiên bản để đối chiếu giá. Kết nối workbook là bước riêng.",
+    "developerName": "CCM-AI",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "defaultPrompt": "Dùng thư viện ĐNTC đã nạp trong CCM-AI để soát vùng CCM theo các cột tôi chọn."
+  }
+}

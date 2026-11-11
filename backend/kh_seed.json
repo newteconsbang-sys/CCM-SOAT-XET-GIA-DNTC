@@ -1,0 +1,557 @@
+{
+ "den bao pha": {
+  "name": "Đèn báo pha",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau chi 2a + de": {
+  "name": "Cầu chì 2A + Đế",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mccb 3p-630a -42ka": {
+  "name": "Cầu dao tự động MCCB 3P-630A -42KA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "shuntrip cho mccb 3p-630a": {
+  "name": "Shuntrip cho MCCB 3P-630A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ro le bao ve cham dat (earth fault relay-mk201a -pct-400/5a)": {
+  "name": "Rơ le bảo vệ chạm đất (Earth Fault Relay-MK201A  -PCT-400/5A)",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mccb 3p-200a-30ka": {
+  "name": "Cầu dao tự động MCCB 3P-200A-30kA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mccb 3p-150a-25ka": {
+  "name": "Cầu dao tự động MCCB 3P-150A-25kA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mccb 3p-100a-25ka": {
+  "name": "Cầu dao tự động MCCB 3P-100A-25kA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "thanh cai": {
+  "name": "Thanh cái",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cable clamp": {
+  "name": "Cable clamp",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "vo tu dien (1800x800x450) - co mai che lien tu": {
+  "name": "Vỏ tủ điện (1800x800x450) - có mái che liền tủ",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "gia do tu dien": {
+  "name": "Giá đỡ tủ điện",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap nhom al/xlpe/pvc 1c x 240mm2": {
+  "name": "Cáp nhôm Al/XLPE/PVC 1C x 240mm2",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ong gan xoan tdf 160/135": {
+  "name": "Ống găn xoắn TDF 160/135",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "vat tu phu": {
+  "name": "Vật tư phụ",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "shuntrip cho mccb 3p-200a": {
+  "name": "Shuntrip cho MCCB 3P-200A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mcb 3p - 40a - 6ka": {
+  "name": "Cầu dao tự động MCB 3P - 40A - 6KA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mcb 1p-20a -6ka": {
+  "name": "Cầu dao tự động MCB 1P-20A -6KA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ro le bao ve dong ro (earth leakage relay - din 300 -zct-d40)": {
+  "name": "Rơ le bảo vệ dòng rò (Earth Leakage Relay - DIN 300 -ZCT-D40)",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "thanh cai, cap dien": {
+  "name": "Thanh cái, cáp điện",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "mat che mica": {
+  "name": "Mặt che mica",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "teminal 3p-125a 5 cuc": {
+  "name": "Teminal 3P-125A  5 cực",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "vo tu dien db-cons (500x700x210)": {
+  "name": "Vỏ tủ điện DB-CONS  (500x700x210)",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap dong cu/xlpe/pvc 5c(4x50+1x35)mm2": {
+  "name": "Cáp đồng Cu/XLPE/PVC 5C(4x50+1x35)mm2",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ong xoan hdpe tdf d85/65": {
+  "name": "Ống xoắn HDPE TDF D85/65",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "kim thu set ban kinh 130m": {
+  "name": "Kim thu sét bán kính 130m",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "den led cong suat : 200w - ip 65 dien ap : ac 85 - 265 , 50/60hz chat lieu: nhom, son tinh dien chip & nguon : trung quoc kich thuoc : 425*320*175": {
+  "name": "Đèn led Công suất : 200W  -   IP 65",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "den led cao ap 400w waterproof : ip65 chip led bridgelux 40～45mil 130~150lm/w nguon meanwel kt:l655*390*200mm": {
+  "name": "Đèn led cao áp 400W",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap dien cu/pvc/pvc 3cx2.5mm2": {
+  "name": "Cáp điện Cu/PVC/PVC 3Cx2.5mm2",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ong mem ruot ga pvc d20": {
+  "name": "Ống mềm ruột gà PVC D20",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mccb 3p-75a-22ka": {
+  "name": "Cầu dao tự động MCCB 3P-75A-22KA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "shuntrip cho mccb 3p-75a": {
+  "name": "Shuntrip cho MCCB 3P-75A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mcb 2p-63a -6ka": {
+  "name": "Cầu dao tự động MCB 2P-63A -6KA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "teminal 3p-80a 5 cuc": {
+  "name": "Teminal 3P-80A  5 cực",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "vo tu dien db-off (500x700x210)": {
+  "name": "Vỏ tủ điện DB-OFF (500x700x210)",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap cu/xlpe/pvc 5c(4x25mm2+e16mm2)": {
+  "name": "Cáp CU/XLPE/PVC 5C(4x25mm²+E16mm²)",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "tru dien dn90x3.6mm, l=6m son chong ri": {
+  "name": "Trụ điện DN90x3.6mm, L=6m Sơn chống rỉ",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau chi 2a": {
+  "name": "Cầu chì 2A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mccb 3p-100a": {
+  "name": "Cầu dao tự động MCCB 3P-100A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "shuntrip cho mccb 3p-100a": {
+  "name": "Shuntrip cho MCCB 3P-100A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mcb 3p-40a": {
+  "name": "Cầu dao tự động MCB 3P-40A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mcb 2p-32a": {
+  "name": "Cầu dao tự động MCB 2P-32A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mcb 1p-16a": {
+  "name": "Cầu dao tự động MCB 1P-16A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mcb 2p-20a": {
+  "name": "Cầu dao tự động MCB 2P-20A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "o cam cong nghiep 1 pha 16a": {
+  "name": "Ổ cắm công nghiệp 1 pha 16A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "o cam cong nghiep 1 pha 32a": {
+  "name": "Ổ cắm công nghiệp 1 pha 32A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "o cam cong nghiep 3 pha 32a": {
+  "name": "Ổ cắm công nghiệp 3 pha 32A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap dien": {
+  "name": "Cáp điện",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "vo tu dien": {
+  "name": "Vỏ tủ điện",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "chi phi di doi tu vao theo bptc phan than": {
+  "name": "Chi phí di dời tủ vào theo BPTC phần thân",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mccb 3p -100a - 22ka": {
+  "name": "Cầu dao tự động MCCB 3P -100A - 22KA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mcb 2p-40a -6ka": {
+  "name": "Cầu dao tự động MCB 2P-40A -6KA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "o cam cong nghiep 3 pha": {
+  "name": "Ổ cắm công nghiệp 3 pha",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "phu kien": {
+  "name": "Phụ kiện",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cau dao tu dong mccb 3p -125a - 22ka": {
+  "name": "Cầu dao tự động MCCB 3P -125A - 22KA",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "shuntrip cho mccb 3p-125a": {
+  "name": "Shuntrip cho MCCB 3P-125A",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap nhom al/xlpe/pvc 5c(4x70+1x35)mm2": {
+  "name": "Cáp nhôm Al/XLPE/PVC 5C(4x70+1x35)mm2",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap nhom al/xlpe/pvc 5c(4x50+1x25)mm2": {
+  "name": "Cáp nhôm Al/XLPE/PVC 5C(4x50+1x25)mm2",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap nhom al/xlpe/pvc 5c(4x35+1x16)mm2": {
+  "name": "Cáp nhôm Al/XLPE/PVC 5C(4x35+1x16)mm2",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap nhom al/xlpe/pvc 5c(4x25+1x16)mm2": {
+  "name": "Cáp nhôm Al/XLPE/PVC 5C(4x25+1x16)mm2",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ong xoan hdpe tdf d65/50": {
+  "name": "Ống xoắn HDPE TDF D65/50",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "den led day 3014": {
+  "name": "Đèn led dây 3014",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "dau chuyen nguon cho led day": {
+  "name": "Đầu chuyển nguồn cho led dây",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "hop dau noi dien": {
+  "name": "Hộp đấu nối điện",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap lua chiu luc": {
+  "name": "Cáp lụa chịu lực",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "den 1.2m x 40w bong led": {
+  "name": "Đèn 1.2m x 40W bóng led",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cvv 3cx2.5mm2": {
+  "name": "CVV 3Cx2.5mm2",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "den led cong suat : 200w - ip 65 dien ap : ac 85 - 265 , 50/60hz chat lieu: nhom, son tinh dien goc mo (°) : 120 chip & nguon : trung quoc kich thuoc : 560*310*210": {
+  "name": "Đèn led công suất : 200w  -   IP 65",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "box dien dau noi ip67": {
+  "name": "Box điện đấu nối IP67",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "nhan cong di doi den theo tang": {
+  "name": "Nhân công di dời đèn theo tầng",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "bom cap nuoc q=10m3/h, h=120mh2o, p=7.5 hp.": {
+  "name": "Bơm cấp nước Q=10m3/h, H=120mH2O, P=7.5 HP.",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "tu dieu khien bom bien tan": {
+  "name": "Tủ điều khiển bơm biến tần",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "bon nuoc pvc 5000l (loai dung)": {
+  "name": "Bồn nước PVC 5000L (Loại đứng)",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "bon nuoc pvc 2000l (loai dung)": {
+  "name": "Bồn nước PVC 2000L (Loại đứng)",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "binh ap luc 200l - 16 bar": {
+  "name": "Bình áp lực 200l - 16 Bar",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "khop noi mem dn50": {
+  "name": "Khớp nối mềm DN50",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "y loc dong thau dn50": {
+  "name": "Y lọc đồng thau DN50",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "van 1 chieu dong thau dn50": {
+  "name": "Van 1 chiều đồng thau DN50",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "van cong dong thau dn50": {
+  "name": "Van cổng đồng thau DN50",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ro le ap luc 15k": {
+  "name": "Rơ le áp lực 15K",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "dong ho ap luc 15k": {
+  "name": "Đồng hồ áp lực 15K",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "nga 5 bang dong": {
+  "name": "Ngã 5 bằng đồng",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cum co khi cho he thong bom": {
+  "name": "Cụm cơ khí cho hệ thống bơm",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "gia do may bom": {
+  "name": "Giá đỡ máy bơm",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap 5c-6mm2 cu/pvc/pvc": {
+  "name": "Cáp 5C-6mm2 CU/PVC/PVC",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap 3c-2.5mm2 cu/pvc/pvc": {
+  "name": "Cáp 3C-2.5mm2 CU/PVC/PVC",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "cap 2c-2.5mm2 cu/pvc/pvc": {
+  "name": "Cáp 2C-2.5mm2 CU/PVC/PVC",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ruot ga pvc d32": {
+  "name": "Ruột gà PVC D32",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ruot ga pvc d20": {
+  "name": "Ruột gà PVC D20",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "van phao dong thau dn50": {
+  "name": "Van phao đồng thau DN50",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "phao dien": {
+  "name": "Phao điện",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "van tay gat sanwa": {
+  "name": "Van tay gạt Sanwa",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "vat tu phu lap dat": {
+  "name": "Vật tư phụ lắp đặt",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ong ppr dn50 -pn10": {
+  "name": "Ống PPR DN50 -PN10",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ong ppr dn25-pn10": {
+  "name": "Ống PPr DN25-PN10",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "phu kien ong": {
+  "name": "Phụ kiện ống",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "van cong dong thau dn50 (khoa khan tren truc dung)": {
+  "name": "Van cổng đồng thau DN50 (Khóa khẩn trên trục đứng)",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "tieu nam tang": {
+  "name": "Tiểu nam tầng",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "xi xom": {
+  "name": "Xí xỏm",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "voi xit": {
+  "name": "Vòi xịt",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "pheu thu san dn50": {
+  "name": "Phễu thu sàn DN50",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ong u.pvc d114x3,5mm": {
+  "name": "Ống u.PVC D114x3,5mm",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ong u.pvc d60x2,5mm": {
+  "name": "Ống u.PVC D60x2,5mm",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "khay nhua lam ho thu nuoc": {
+  "name": "Khay nhựa làm hố thu nước",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "bom chim 3p-5.5hp": {
+  "name": "Bơm chìm 3P-5.5HP",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "tu dieu khien bom chim": {
+  "name": "Tủ điều khiển bơm chìm",
+  "kh": "lt100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "ong u.pvc d90x3,0mm": {
+  "name": "Ống u.PVC D90x3,0mm",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "truc van hanh duy tri kiem tra, xu ly su co dam he thong hoat dong an toan. 2 cong nhan khi truc van hanh dien nuoc thi cong 1 thap khi lam ca 1 (7h-17h ), ca 2 (17h-22h)": {
+  "name": "Trực vận hành duy trì kiểm tra, xử lý sự cố đảm hệ thống hoạt động an toàn. 2 công nhân khi trực vận hành điện nước thi công 1 tháp khi làm ca 1 (7h-17h ), ca 2 (17h-22h)",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "tien tang ca khi truc tu 22h-7h sang hom sau (vnd/h/1cn)": {
+  "name": "Tiền tăng ca khi trực từ 22h-7h sáng hôm sau (VNĐ/h/1CN)",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "chi phi dac thu du an": {
+  "name": "Chi phí đặc thù dự án",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ },
+ "chi phi quan ly.": {
+  "name": "Chi phí quản lý.",
+  "kh": "100",
+  "src": "03. BOQ-CCM-PHÚ ĐÔNG-ĐNTC 2.xlsx"
+ }
+}

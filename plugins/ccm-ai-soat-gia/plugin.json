@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ccm-ai-soat-gia",
+  "version": "0.1.0",
+  "description": "Skill soát giá CCM theo thư viện riêng ĐNTC, EW, NCC, NTP và cột giá người dùng chọn. Kết nối thư viện CCM-AI cần được cấu hình riêng.",
+  "author": {
+    "name": "CCM-AI"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CCM-AI · Soát giá",
+        "shortDescription": "Soát giá theo thư viện CCM",
+        "longDescription": "Quy trình dò mô tả, đơn vị và thương hiệu theo thư viện từng nghiệp vụ. Điền giá vật tư, nhân công qua kết nối Excel khi có đủ nguồn và quyền truy cập; giữ nguyên dòng Lô. Gói chỉ chứa skill, chưa cung cấp kết nối đọc thư viện của add-in CCM-AI.",
+        "developerName": "CCM-AI",
+        "category": "Productivity",
+        "capabilities": [
+          "Read"
+        ],
+        "defaultPrompt": "Dùng skill soatxetgia-ccm kiểm tra kết nối thư viện CCM-AI và soát vùng CCM bằng thư viện, các cột tôi chọn. Giữ nguyên dòng Lô."
+      }
+    }
+  }
+}

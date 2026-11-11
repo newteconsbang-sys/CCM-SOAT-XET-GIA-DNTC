@@ -1,0 +1,28 @@
+{
+  "skill_id": "6abe2821384c8191ad026340e9c676c6",
+  "name": "soatxetgia-ccm",
+  "display_name": "soatxetgia ccm",
+  "editor_url": "https://chatgpt.com/skills/editor/6abe2821384c8191ad026340e9c676c6",
+  "created_with": "ChatGPT Skills / Add skill / Create with editor",
+  "installed_verified": true,
+  "created_by_me_verified": true,
+  "saved_instructions_verified": true,
+  "ccm_library_connection_verified": false,
+  "excel_pane_visibility_verified": false,
+  "proof_image": "D:/SoatXetGia/CCM-Skill-da-cai.jpg",
+  "workbook_bridge_implemented": true,
+  "updated_instructions_saved": true,
+  "excel_chat_pane_signed_in_verified": true,
+  "library_counts": {
+    "DNTC": 0,
+    "EW": 0,
+    "NCC": 0,
+    "NTP": 0
+  },
+  "live_price_review_verified": false,
+  "local_web_implemented": true,
+  "local_codex_reader_verified": true,
+  "web_instructions_saved": true,
+  "cloud_local_library_connection_verified": false,
+  "web_version": "0.6.0"
+}

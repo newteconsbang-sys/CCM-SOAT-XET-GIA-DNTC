@@ -23,3 +23,13 @@ templates/versions/
 .pnpm-store/
 libraries/
 tmp*/
+
+# Khong dua len GitHub: du lieu that / file lon / ban demo co du lieu
+.pnpm-store/
+.venv/
+shots/
+/*.xlsx
+/*.html
+/*.png
+/*.jpg
+manifests/

@@ -20,6 +20,11 @@ try {
  $reg='HKCU:\Software\Microsoft\Office\16.0\WEF\Developer'
  New-Item -Path $reg -Force | Out-Null
  New-ItemProperty -Path $reg -Name '79e68a1b-4a3b-41d2-970b-f2d83c16dc01' -Value (Join-Path $root 'manifests/ccm-ai.xml') -PropertyType String -Force | Out-Null
+ # Keep the local task pane available after sign-in, without opening Excel or AI.
+ $startup='HKCU:\Software\Microsoft\Windows\CurrentVersion\Run'
+ New-Item -Path $startup -Force | Out-Null
+ $command='"'+(Join-Path $env:WINDIR 'System32/WindowsPowerShell/v1.0/powershell.exe')+'" -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File "'+(Join-Path $root 'scripts/Start-CCM.ps1')+'" -NoExcel -NoAI -Headless'
+ New-ItemProperty -Path $startup -Name 'CCM-AI-LocalService' -Value $command -PropertyType String -Force | Out-Null
  if (!$NoShortcut) {
   $shell=New-Object -ComObject WScript.Shell
   $desktop=[Environment]::GetFolderPath('Desktop')
@@ -30,6 +35,11 @@ try {
   $shortcut.WorkingDirectory=$root;$shortcut.WindowStyle=7;$shortcut.Description='CCM-AI local HTTPS and Excel';$shortcut.Save()
   $displayShortcut=Join-Path $desktop 'Khởi động CCM-AI.lnk'
   Move-Item -LiteralPath $asciiShortcut -Destination $displayShortcut -Force
+  $webShortcut=$shell.CreateShortcut((Join-Path $desktop 'CCM-AI Soat gia (Web).lnk'))
+  $webShortcut.TargetPath=Join-Path $env:WINDIR 'System32/WindowsPowerShell/v1.0/powershell.exe'
+  $webShortcut.Arguments='-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File "'+(Join-Path $root 'scripts/Open-Web.ps1')+'"'
+  $webShortcut.WorkingDirectory=$root;$webShortcut.WindowStyle=7;$webShortcut.Description='CCM-AI local web price library';$webShortcut.Save()
+
  }
  if (!$SkipTrust -and !(Get-ChildItem Cert:\CurrentUser\Root | Where-Object Thumbprint -eq $cert.Thumbprint)) {
   Write-Host 'Windows sẽ hỏi tin cậy chứng chỉ CCM-AI localhost. Vui lòng xác nhận trực tiếp.'
