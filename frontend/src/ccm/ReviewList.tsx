@@ -252,9 +252,9 @@ function PackageModal({ projects, versions, activeVersion, initialProject, onClo
           </select>
         </Field>
         <Field label="Tên gói thầu" req span={2}><input autoFocus value={name} onChange={e => setName(e.target.value)} placeholder="VD: Hệ thống chống sét & nối đất" /></Field>
-        <Field label="Phương án" req span={2}>
+        <Field label="Quy trình" req span={2}>
           <select value={pa} onChange={e => setPa(e.target.value)}>{PAS.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select>
-          {pa === 'PA1' && <small className="cx-hint">Dự toán: file phải có đủ các cột A → M (STT, Mô tả, Đơn vị, Khối lượng, ĐG VT, ĐG NC, % đã KH, % KH, Bắt đầu, Kết thúc, Đơn giá, Thành tiền, Ghi chú). Nhập A–D, I, J – tool tự áp giá cột E, F và %KH cột H theo thư viện giá.</small>}
+          {pa === 'PA1' && <small className="cx-hint">Dự toán ĐNTC: file phải có đủ các cột A → M (STT, Mô tả, Đơn vị, Khối lượng, ĐG VT, ĐG NC, % đã KH, % KH, Bắt đầu, Kết thúc, Đơn giá, Thành tiền, Ghi chú). Nhập A–D, I, J – tool tự áp giá cột E, F và %KH cột H theo thư viện giá.</small>}
         </Field>
         <Field label="Vị trí dự án (tra bảng khấu hao vật tư)" req span={2}>
           <select value={region} onChange={e => setRegion(e.target.value)}><option value="xa">XA BIỂN</option><option value="gan">GẦN BIỂN</option></select>

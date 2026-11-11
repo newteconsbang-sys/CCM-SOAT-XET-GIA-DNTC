@@ -639,5 +639,5 @@ def _apply_sheet(ws, cfg: Dict[str, Any], items: List[Dict[str, Any]], custom: O
             if m.max_col >= lo:
                 ws.unmerge_cells(str(m))
         ws.delete_cols(lo - 1, (ws.max_column or lo) - lo + 2)
-        return get_column_letter(lo) + " (PA1 – chỉ Phần 1)"
+        return get_column_letter(lo) + " (Dự toán ĐNTC – chỉ Phần 1)"
     return get_column_letter(min(col.values()))

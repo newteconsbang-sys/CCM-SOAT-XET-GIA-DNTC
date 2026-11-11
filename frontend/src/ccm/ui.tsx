@@ -16,7 +16,7 @@ export type Pkg = {
 export const WORK_TYPES = ['Điện', 'Nước', 'PCCC', 'Điện nhẹ', 'HVAC'];
 export const STATUSES = ['Đang soát xét', 'Đã phản hồi BCHCT', 'Xong'];
 // Phương án của gói
-export const PAS: [string, string][] = [['PA1', 'PA1: Dự toán ĐNTC'], ['PA2', 'PA2: NTP / BCHCT soát xét'], ['PA3', 'PA3: NTP / BCHCT / P.KSCP']];
+export const PAS: [string, string][] = [['PA1', 'Dự toán'], ['PA2', 'NTP/BCHCT'], ['PA3', 'NTP/BCHCT/P.KSCP']];
 
 const vn0 = new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 0 });
 const vn2 = new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 2 });

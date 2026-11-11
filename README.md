@@ -298,3 +298,18 @@ Thanh fx có nhãn cho ô đang chọn: "ƒ Công thức" (tím), "123 Giá tr�
 
 ## 0.9.96
 - Tao goi thau: chi hoi Du an, Ten goi, Phuong an (PA1/2/3), Vi tri (Xa bien / Gan bien); khong can nap file khi tao - nap sau bang Nhap du lieu tu excel
+
+## 0.9.97
+- Doi "PA" thanh "Quy trinh": Du toan DNTC / NTP-BCHCT soat xet / NTP-BCHCT-P.KSCP (bo chu PA1 PA2 PA3); dau bang can lai cot cho vua
+
+## 0.9.98
+- Thanh ben: thay chu CCM-AI bang logo NEWTECONS (nen trang)
+
+## 0.9.99
+- Logo thanh ben thu gon (cao giam 1/2)
+
+## 0.9.100
+- Bang soat xet: moi phan mot mau (Quy trinh: Du toan, NTP/BCHCT, NTP/BCHCT/P.KSCP; Phan 1 do nhat, Phan 2 xanh duong nhat, Phan 3 cam nhat); duong ke doc ngan cach cac phan chay tu tieu de xuong het bang
+
+## 0.9.101
+- Giao dien v2 theo mau de xuat (chi doi kieu hien thi, khong doi noi dung / chuc nang): mau NEWTECONS, thanh ben gon, logo to day o, the trang bo goc, nut / bang / tab dong bo; them file frontend/src/ccm/theme-v2.css

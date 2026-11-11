@@ -1546,7 +1546,7 @@ export function PackageDetail({ id, onExit }: { id: number; onExit: () => void }
                         onContextMenu={e => { if (r.sid) { e.preventDefault(); setCurSid(r.sid); setMenu({ x: e.clientX, y: e.clientY, sid: r.sid }); } }}>
                         <td className="rn" style={stick(0)}>{r.row}<span className="row-rz" onMouseDown={e => startRowResize(e)} /></td><td style={stick(1)} />
                         {p1.map((c, i) => <td key={c.key} className={c.cls} style={stick(2 + i)}>{c.get(r)}</td>)}
-                        {groupTotals.has(r.row) ? (() => { const g = groupTotals.get(r.row)!; return sumCells(g.rev, g.diff, g.ntp, g.xs); })() : <td colSpan={p2w.length} />}
+                        {groupTotals.has(r.row) ? (() => { const g = groupTotals.get(r.row)!; return sumCells(g.rev, g.diff, g.ntp, g.xs); })() : <>{p2w.length - n3 > 0 && <td colSpan={p2w.length - n3} />}{n3 > 0 && <td colSpan={n3} className="p3s" />}</>}
                       </tr>
                     );
                   }
@@ -1704,11 +1704,11 @@ export function PackageDetail({ id, onExit }: { id: number; onExit: () => void }
           <label>Ngày tạo</label><input className="ro" readOnly value={dmy(d.created_at)} />
           <label>Dự án</label>
           <div className="bv-loc bv-pa"><input className="ro" readOnly value={d.project_name} title={d.project_name} />
-            <span className="bv-heso"><label title="Phương án: PA1 Dự toán (tool áp giá E, F và %KH H từ thư viện) · PA2 BCHCT soát xét · PA3 P.KSCP soát xét">PA</label>
+            <span className="bv-heso"><label title="Quy trình: Dự toán (tool áp giá E, F và %KH H từ thư viện) · NTP/BCHCT · NTP/BCHCT/P.KSCP">Quy trình</label>
               <select value={pa} disabled={!!viewVer} onChange={async e => {
                 const v = e.target.value;
                 try { await mepApi(`/api/mep/packages/${id}`, { method: 'PUT', body: JSON.stringify({ pa: v }) });
-                  setD(x => (x ? { ...x, pa: v } as any : x)); toast(`Phương án: ${PAS.find(x => x[0] === v)?.[1]}${v === 'PA1' ? ' – bấm Run (Mặc định / Khấu hao) để áp giá E, F và %KH H' : ''}`);
+                  setD(x => (x ? { ...x, pa: v } as any : x)); toast(`Quy trình: ${PAS.find(x => x[0] === v)?.[1]}${v === 'PA1' ? ' – bấm Run (Mặc định / Khấu hao) để áp giá E, F và %KH H' : ''}`);
                 } catch (er: any) { toast(er.message, 'err'); }
               }}>{PAS.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></span></div>
           <label>Gói thầu</label><input value={form.name} onChange={e => setF('name', e.target.value)} title={d.file_name ? `File báo giá NTP: ${d.file_name}` : ''} />
@@ -1861,7 +1861,8 @@ export function PackageDetail({ id, onExit }: { id: number; onExit: () => void }
               </div>
             )}
             {!structured && <div className="bv-hint">Gói này soát xét bằng bản cũ nên Phần 1 đang hiện theo cột chuẩn. Bấm <b>Tải dữ liệu</b> để hiện đúng cột, đúng dòng như file gốc.</div>}
-            <style>{`.cx-grid.rv thead tr:not(.grp) > :nth-child(${3 + p1.length}), .cx-grid.rv tbody tr > :nth-child(${3 + p1.length}) { border-left: 4px solid #1d4ed8 !important; }`}</style>
+            <style>{`.cx-grid.rv thead tr:not(.grp) > :nth-child(${3 + p1.length}), .cx-grid.rv tbody tr > :nth-child(${3 + p1.length}), .cx-grid.rv tfoot tr > :nth-child(${2 + (p1.length - frozen.n > 0 ? 1 : 0)}) { border-left: 4px solid #1d4ed8 !important; }`
+              + (n3 ? `.cx-grid.rv thead tr:not(.grp) > :nth-child(${3 + p1.length + p2keys.length - n3}), .cx-grid.rv tbody tr > :nth-child(${3 + p1.length + p2keys.length - n3}), .cx-grid.rv tfoot tr > :nth-child(${2 + (p1.length - frozen.n > 0 ? 1 : 0) + p2keys.length - n3}) { border-left: 4px solid #ea580c !important; }` : '')}</style>
             <table ref={gridRef} tabIndex={-1} onMouseDown={onGridMouseDown} onMouseOver={onGridMouseOver} onPaste={onGridPaste} onKeyDown={onGridKeyDown}
               onInput={e => { const t = e.target as HTMLInputElement; if (t.dataset?.c) { updateHint(t); setFxText(t.value); widenEdit(t); } }}
               onKeyUp={e => { const t = e.target as HTMLInputElement; if (t.dataset?.c && !['ArrowDown', 'ArrowUp', 'Enter', 'Tab', 'Escape'].includes(e.key)) updateHint(t); }}
@@ -1897,7 +1898,7 @@ export function PackageDetail({ id, onExit }: { id: number; onExit: () => void }
                   {p1.map((c, i) => <th key={c.key} style={stick(2 + i, true)} className={i === frozen.n ? 'p1s' : ''} title={c.label + (c.field ? '' : ' – cột của file gốc, chỉ hiển thị')}><span className="th-clamp">{c.label || '—'}</span></th>)}
                   {p2keys.map(k => {
                     const sd = stdOf(k); const x = xById.get(k);
-                    return sd ? <th key={k} className={`${sd.edit ? 'edit-h' : ''} ${k.startsWith('k3_') ? 'k3h' : ''}`} title={sd.title || sd.desc}>{sd.label}{sd.edit ? ' ✎' : ''}</th>
+                    return sd ? <th key={k} className={`${sd.edit ? 'edit-h' : ''} ${k.startsWith('k3_') ? 'k3h' : 'p2h'}`} title={sd.title || sd.desc}>{sd.label}{sd.edit ? ' ✎' : ''}</th>
                       : x?.type === 'formula' ? <th key={k} title={`Công thức: = ${x.formula}`}>{x.label} <i className="fx-i">fx</i></th>
                       : <th key={k} className="edit-h" title={`Cột tự tạo (${x?.type === 'number' ? 'số' : 'chữ'}) – sửa trong tab Cấu hình cột`}>{x?.label} ✎</th>;
                   })}

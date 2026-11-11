@@ -1,0 +1,84 @@
+/* ===== Giao diện v2 (theo mẫu đề xuất) – CHỈ đổi kiểu hiển thị, không đổi nội dung / chức năng =====
+   Màu NEWTECONS: đỏ #E2312D · xanh #23578F · nền xám nhạt · ô trắng bo góc */
+.cx-app {
+  --navy: #0F2440; --navy-2: #16325A; --blue: #23578F; --blue-2: #1C4675; --blue-soft: #EAF1FA;
+  --nt-red: #E2312D; --nt-red-soft: #FDECEC;
+  --bg: #F4F6FA; --line: #E3E8EF; --line-2: #EEF2F6; --text: #0F1E33; --muted: #7A889B;
+  --ok: #16A34A; --ok-bg: #E9F8EF; --bad: #E2312D; --bad-bg: #FDECEC; --warn: #B45309; --warn-bg: #FEF6E4;
+  --info: #23578F; --info-bg: #EAF1FA;
+  --sh: 0 1px 2px rgba(15,30,51,.05), 0 4px 14px rgba(15,30,51,.05);
+  font-size: 13.5px;
+}
+
+/* ---------- Thanh bên ---------- */
+.cx-sidebar { width: 232px; background: var(--navy); padding: 0 10px; }
+.cx-brand { padding: 10px 4px 10px !important; margin: 0 -10px; justify-content: center; border-bottom: 1px solid rgba(255,255,255,.07); }
+.cx-brand .cx-logo-card { flex: 1; padding: 2px 4px !important; margin: 0 10px !important; border-radius: 8px; }
+.cx-brand .cx-logo-card img { height: 62px !important; width: auto !important; max-width: 100% !important; }
+.cx-nav-group { font-size: 10.5px; letter-spacing: .14em; color: #6F84A3; font-weight: 600; margin: 18px 8px 6px; }
+.cx-sidebar .cx-nav { position: relative; font-size: 14px; font-weight: 500; padding: 9px 12px; gap: 10px; margin-bottom: 2px; color: #C9D5E6; }
+.cx-sidebar .cx-nav:hover { background: rgba(255,255,255,.06); }
+.cx-sidebar .cx-nav.on { background: rgba(255,255,255,.1); color: #fff; box-shadow: none; }
+.cx-sidebar .cx-nav.on::before { content: ""; position: absolute; left: -10px; top: 8px; bottom: 8px; width: 3px; border-radius: 0 3px 3px 0; background: var(--nt-red); }
+.cx-side-foot { margin-left: -10px; margin-right: -10px; padding: 12px 18px; font-size: 11.5px; border-top: 1px solid rgba(255,255,255,.07); }
+.cx-side-user { font-size: 13px !important; }
+.cx-avatar { background: var(--blue) !important; color: #fff !important; width: 28px !important; height: 28px !important; font-size: 11px !important; }
+
+/* ---------- Trang chung ---------- */
+.cx-page { padding: 18px 22px 22px; gap: 14px; }
+.cx-page-head h1 { font-size: 21px; font-weight: 700; letter-spacing: -.01em; }
+.cx-crumb { font-size: 12px; }
+.cx-card { border-radius: 10px; box-shadow: var(--sh); }
+.cx-card-head { padding: 12px 14px; }
+.cx-card-head h2 { font-size: 14.5px; font-weight: 700; }
+.cx-btn { height: 36px; padding: 0 14px; font-size: 13px !important; font-weight: 600 !important; border-color: var(--line) !important; }
+.cx-btn.primary { background: var(--blue) !important; border-color: var(--blue) !important; }
+.cx-btn.primary:hover:not(:disabled) { background: var(--blue-2) !important; }
+.cx-btn.sm { height: 30px; font-size: 12.5px !important; }
+.cx-badge { border-radius: 999px; font-size: 11.5px; padding: 3px 10px; }
+.cx-tabs button { font-size: 13.5px !important; }
+
+/* Bảng danh sách */
+.cx-table th { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; background: #FAFBFD; padding: 10px; }
+.cx-table td { font-size: 13.5px; padding: 11px 10px; }
+.cx-table tbody tr:hover { background: #FAFCFF; }
+.cx-table .mono { font-size: 12.5px; color: #44546A; }
+
+/* Hộp thoại */
+.cx-modal { border-radius: 12px !important; }
+
+/* ---------- Bảng soát xét giá ---------- */
+.bv-titlebar { padding: 2px 2px 12px; border-bottom: 0; }
+.bv-titlebar h1 { color: var(--text); font-size: 20px; font-weight: 700; letter-spacing: -.01em; }
+.bv-btn { height: 34px; border-radius: 8px !important; background: #fff !important; border-color: var(--line) !important; font-weight: 600 !important; font-size: 12.5px !important; }
+.bv-btn:hover:not(:disabled) { border-color: #C8D2DF !important; }
+.bv-btn.orange { background: #fff !important; border-color: var(--line) !important; color: var(--text) !important; }
+.bv-btn.green { background: #16A34A !important; border-color: #16A34A !important; color: #fff !important; }
+.bv-btn.blue { background: var(--blue) !important; border-color: var(--blue) !important; color: #fff !important; }
+.bv-btn.teal { background: var(--blue-soft) !important; border-color: #D3E2F4 !important; color: var(--blue) !important; }
+.bv-form2 { background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--sh); padding: 10px 14px !important; margin-bottom: 10px; }
+.bv-form2 label { color: var(--muted) !important; font-weight: 500 !important; font-size: 11.5px !important; }
+.bv-form2 input, .bv-form2 select { height: 28px !important; border-color: var(--line) !important; border-radius: 7px !important; font-weight: 600; color: var(--text) !important; font-size: 12.5px !important; }
+.bv-form2 input.ro { background: #F7F9FC !important; color: var(--text) !important; }
+.bv-form2 input.strong { color: var(--blue) !important; font-size: 13.5px !important; }
+.bv-form2 input.neg { color: var(--nt-red) !important; }
+.bv-toolbar { background: #fff; border: 1px solid var(--line); border-radius: 10px 10px 0 0; padding: 8px 10px !important; border-bottom: 0; }
+.bv-tabs { border-bottom: 1px solid var(--line); padding-left: 4px; gap: 2px; }
+.cx-app .bv-tabs button { background: transparent; color: var(--muted); border-radius: 0; padding: 9px 14px; font-weight: 600; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.cx-app .bv-tabs button.on { background: transparent; color: var(--blue); border-bottom-color: var(--blue); }
+.cx-grid.rv thead tr:nth-child(2) th, .cx-grid.rv thead tr:not(.grp) th { text-transform: uppercase; letter-spacing: .03em; }
+
+/* ---------- Thư viện giá ---------- */
+.cx-lib-kindbar button { border-radius: 999px; padding: 7px 14px; font-size: 13px; border-color: var(--line); color: #44546A; }
+.cx-lib-kindbar button:hover { border-color: #C8D2DF; }
+.cx-lib-kindbar button.on { background: var(--blue); border-color: var(--blue); }
+.cx-sheet-grid thead th { background: var(--blue) !important; color: #fff !important; font-size: 11px; letter-spacing: .03em; border-bottom: 0 !important; border-right: 1px solid rgba(255,255,255,.15) !important; }
+.lib-sheet-scroll .cx-sheet-grid thead th { box-shadow: none; }
+.cx-sheet-grid thead th.rowno, .cx-sheet-grid thead th:first-child { background: var(--navy-2) !important; color: #C9D5E6 !important; }
+.cx-sheet-grid tr.k-group td { background: #F6F8FB; color: var(--navy-2); }
+@media (max-width: 1100px) {
+  .cx-sidebar { width: 72px; padding: 0 8px; }
+  .cx-brand .cx-logo-card { margin: 0 4px !important; }
+  .cx-brand .cx-logo-card img { height: 30px !important; }
+  .cx-sidebar .cx-nav.on::before { left: -8px; }
+}

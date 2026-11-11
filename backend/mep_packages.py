@@ -255,7 +255,7 @@ def _check_pa1(configs: List[Dict[str, Any]]):
         m = c.get("mapping") or {}
         miss = [lbl for f, lbl in PA1_COLS if not m.get(f)]
         if miss:
-            raise HTTPException(400, f"PA1 – Dự toán: sheet {c.get('sheet')} thiếu cột: {', '.join(miss)}. "
+            raise HTTPException(400, f"Dự toán ĐNTC: sheet {c.get('sheet')} thiếu cột: {', '.join(miss)}. "
                                      "File dự toán phải có đủ các cột A → M")
 
 
@@ -285,7 +285,7 @@ def _fill_estimate(pid: int, p: Dict[str, Any], region: str) -> int:
                 r.update(f_boq_dep_pct=k["formula"], f_rv_dep_pct=k["formula"])
         rows.append(r)
     if rows:
-        review_service.save_rows(pid, p["session_id"], rows, "Tự động (PA1 – Dự toán)")
+        review_service.save_rows(pid, p["session_id"], rows, "Tự động (Dự toán ĐNTC)")
     return len(rows)
 
 
@@ -528,7 +528,7 @@ def update_package(pid: int, body: Dict[str, Any]):
     fields = ["project_id", "code", "name", "work_type", "subcontractor", "version_id", "deadline", "status", "vat_percent", "note", "he_so", "pa"]
     sets = {k: body[k] for k in fields if k in body}
     if "pa" in sets and sets["pa"] not in PA_LABELS:
-        raise HTTPException(400, "Phương án không hợp lệ")
+        raise HTTPException(400, "Quy trình không hợp lệ")
     if "he_so" in sets:
         try:
             sets["he_so"] = float(str(sets["he_so"]).replace(",", ".")) if sets["he_so"] not in (None, "") else 1.0

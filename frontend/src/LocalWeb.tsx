@@ -6,6 +6,8 @@ import { LibraryVersions } from './ccm/LibraryVersions';
 import { Icon, Toaster } from './ccm/ui';
 import './mepStyles.css';
 import './ccm/theme.css';
+import './ccm/theme-v2.css';
+import logoUrl from './ccm/newtecons-logo.png';
 
 type Route = { page: 'review' | 'package' | 'library'; id?: number };
 
@@ -49,8 +51,7 @@ export function LocalWeb() {
     <div className="cx-app">
       <aside className="cx-sidebar">
         <div className="cx-brand">
-          <div className="cx-logo">C</div>
-          <div><b>CCM-AI</b><small>CONSTRUCTION TOOL</small></div>
+          <div className="cx-logo-card" title="CCM-AI – Soát xét giá điện nước"><img src={logoUrl} alt="NEWTECONS – Build on trust" /></div>
         </div>
         <div className="cx-nav-group">CHỨC NĂNG</div>
         {nav('review', 'Soát xét giá', 'review', ['package'])}
@@ -61,7 +62,7 @@ export function LocalWeb() {
         <div className="cx-side-foot">
           <span className={`cx-dot ${ready ? 'on' : ready === false ? 'off' : ''}`} />
           {ready ? 'Đã kết nối dịch vụ' : ready === false ? 'Chưa kết nối – mở Khởi động CCM-AI' : 'Đang kết nối…'}
-          <div>Phiên bản 0.9.96 · © 2026</div>
+          <div>Phiên bản 0.9.101 · © 2026</div>
         </div>
       </aside>
 
